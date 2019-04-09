@@ -13,6 +13,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html')); // if the requested isn't in the public folder, just give them back index.html
 });
 
-app.listen(3000, () => {    //start up on port 3000
+app.listen(port, () => {    //start up on port 3000
     console.log('Server is up!');
 });
