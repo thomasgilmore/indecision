@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "start": "node server/server.js"
   },
@@ -19,6 +20,7 @@
     "css-loader": "^2.1.1",
     "express": "^4.16.4",
     "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "react": "^16.8.4",
