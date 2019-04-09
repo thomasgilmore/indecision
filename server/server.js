@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(publicPath)); //use public directory to serve up all of our static assets
 
 //match all unmatched routes
+// if what the person requested isn't in the public folder, just give them back index.html
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html')); // if the requested isn't in the public folder, just give them back index.html
 });
